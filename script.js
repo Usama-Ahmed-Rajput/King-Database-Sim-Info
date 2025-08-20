@@ -109,7 +109,7 @@ searchBtn.addEventListener("click", () => {
       <p style="color:#0f0; font-weight:bold; font-size:18px; margin-bottom:15px;">${input}</p>
 
       <div style="background:#000; border-radius:8px; padding:15px; text-align:left; color:#0f0; box-shadow:0 0 15px #0f0 inset;">
-        <p><strong>Method:</strong> EasyPaisa</p>
+        <p><strong>Method:</strong> EasyPaisa, JazzCash</p>
         <p><strong>Account Holder:</strong> Usama Ahmed</p>
         <p><strong>Account Number:</strong> 03079970288</p>
         <p><strong>Amount:</strong> Rs.300</p>
@@ -127,4 +127,5 @@ searchBtn.addEventListener("click", () => {
     </div>
   `;
 });
+
 
