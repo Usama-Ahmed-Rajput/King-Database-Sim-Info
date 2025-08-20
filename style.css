@@ -277,3 +277,9 @@ h1 {
     font-size: 18px;
   }
 }
+
+@media (max-width: 480px){
+  footer{
+    font-size:20px;}
+}
+
