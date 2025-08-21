@@ -1,139 +1,135 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width,initial-scale=1" />
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Poppins:wght@300;400;500;600;700&display=swap"
-        rel="stylesheet">
-    <title>King Database Sim Info</title>
-    <link rel="shortcut icon" href="./images/kdb.png" type="image/x-icon">
-    <link rel="stylesheet" href="style.css" />
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>King Database Sim Info </title>
+
+  <!-- Fonts & Favicon -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="shortcut icon" href="./images/kdb.png" type="image/x-icon">
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="style.css" />
 </head>
+<body class="hacker-mode">
+  <!-- Matrix Background (login par hi dikhega) -->
+  <canvas id="matrix"></canvas>
 
-<body>
+  <!-- LOGIN PAGE -->
+  <div id="login-page" class="login-page">
+    <div class="login-box">
+      <h2>ACCESS PORTAL</h2>
+      <input type="text" id="username" placeholder="Username" />
+      <input type="password" id="password" placeholder="Password" />
+      <button id="loginBtn">LOGIN</button>
+      <p id="error" class="error">Access Denied!</p>
+    </div>
+  </div>
+
+  <!-- REAL WEBSITE (login ke baad hi show hogi) -->
+  <div id="site-content" class="site hidden">
     <div class="wrap">
-        <header>
-            <h1>KING DATABASE SIM INFO</h1>
-            <p class="sub">Enter Mobile Number Or CNIC And Get Details In Seconds</p>
-        </header>
+      <header>
+        <h1>KING DATABASE SIM INFO</h1>
+        <p class="sub">Enter Mobile Number Or CNIC And Get Details In Seconds</p>
+      </header>
 
-        <main>
-            <div class="search">
-                <input id="searchInput" type="text" placeholder="e.g. 03285809899 or 3740598765432" />
-                <button id="searchBtn">Search</button>
-            </div>
+      <main>
+        <div class="search">
+          <input id="searchInput" type="text" placeholder="e.g. 03285809899 or 3740598765432" />
+          <button id="searchBtn">Search</button>
+        </div>
 
-            <div id="result"></div>
+        <div id="result"></div>
 
-
-            <div class="actions">
-                <p>Created by : <strong>USAMA AHMED</strong></p>
-                <a class="btn" href="https://wa.me/923190831123" target="_blank">📱 Contact Me</a>
-                <a class="btn" href="https://chat.whatsapp.com/E5FpHRaRV72KxMxD2TmWcO" target="_blank">💬 Join WhatsApp
-                    Group</a>
-            </div>
-        </main>
+        <div class="actions">
+          <p>Created by : <strong>USAMA AHMED</strong></p>
+          <a class="btn" href="https://wa.me/923190831123" target="_blank">📱 Contact Me</a>
+          <a class="btn" href="https://chat.whatsapp.com/E5FpHRaRV72KxMxD2TmWcO" target="_blank">💬 Join WhatsApp Group</a>
+        </div>
+      </main>
     </div>
 
     <!-- START: Services Section -->
     <section class="services-container" aria-label="Hacking related paid services and mobile hacking options">
-        <h2>Our Paid Services</h2>
+      <h2>Our Paid Services</h2>
 
-        <div class="services-buttons">
-            <a href="https://wa.me/923190831123?text=Hi Sir!%20I%20need%20details%20about%20All%20network%20Fresh%20Number%20Details"
-                target="_blank">
-                All Network Fresh Number Details (Name, CNIC, Address)
-            </a>
-            <a href="https://wa.me/923190831123?text=Hi Sir!%20I%20need%20details%20about%20All%20numbers%20against%20CNIC"
-                target="_blank">
-                All Numbers Against CNIC
-            </a>
-            <a href="https://wa.me/923190831123?text=Hi Sir!%20I%20want%20Nadra%20CNIC%20Verification" target="_blank">
-                Nadra CNIC Verification
-            </a>
-            <a href="https://wa.me/923190831123?text=Hi Sir!%20I%20need%20Pin%20Point%20Location" target="_blank">
-                Pin Point Location
-            </a>
-            <a href="https://wa.me/923190831123?text=Hi Sir!%20I%20need%20Family%20Tree" target="_blank">
-                Family Tree
-            </a>
-            <a href="https://wa.me/923190831123?text=Hi Sir!%20I%20need%20CDR%20(Call%20Data%20Record)" target="_blank">
-                CDR (Call Data Record)
-            </a>
-            <a href="https://wa.me/923190831123?text=Hi Sir!%20I%20want%20IMEI%20Tracking%20(Stolen%20or%20Lost%20Mob%20Trace)"
-                target="_blank">
-                IMEI Tracking (Stolen or Lost Mob Trace)
-            </a>
-            <a href="https://wa.me/923190831123?text=Hi Sir!%20I%20need%20Fake%20WhatsApp%20Number" target="_blank">
-                Fake WhatsApp Number
-            </a>
-            <a href="https://wa.me/923190831123?text=Hi Sir!%20I%20want%20Vehicle%20Details" target="_blank">
-                Vehicle Details
-            </a>
-            <a href="https://wa.me/923190831123?text=Hi Sir!%20I%20want%20Marriage%20Certificate%20(Copy)"
-                target="_blank">
-                Marriage Certificate (Copy)
-            </a>
-            <a href="https://wa.me/923190831123?text=Hi Sir!%20I%20want%20Death%20Certificate%20(Copy)" target="_blank">
-                Death Certificate (Copy)
-            </a>
-            <a href="https://wa.me/923190831123?text=Hi Sir!%20I%20need%20FRC%20(Family%20Registration%20Certificate)"
-                target="_blank">
-                FRC (Family Registration Certificate)
-            </a>
-            <a href="https://wa.me/923190831123?text=Hi Sir!%20I%20want%20Vaccination%20(Corona%2C%20Booster%2C%20Polio)"
-                target="_blank">
-                Vaccination (Corona, Booster, Polio)
-            </a>
-            <a href="https://wa.me/923190831123?text=Hi Sir!%20I%20need%20Travel%20History" target="_blank">
-                Travel History
-            </a>
-            <a href="https://wa.me/923190831123?text=Hi Sir!%20I%20want%20Passport%20Details" target="_blank">
-                Passport Details
-            </a>
-            <a href="https://wa.me/923190831123?text=Hi Sir!%20I%20want%20Fake%20Calling%20Software%20(Private%2C%20Unknown%20Number)"
-                target="_blank">
-                Fake Calling Software (Private, Unknown Number)
-            </a>
-            <a href="https://wa.me/923190831123?text=Hi Sir!%20I%20want%20Tiktok%20Services%20(Followers%2CVeiws%20Likes)"
-                target="_blank">
-                TikTok Services (Followers, Likes, Veiws, Comments)
-            </a>
-            <a href="https://wa.me/923190831123?text=Hi Sir!%20I%20want%20Instagram%20Services%20(Followers%2CVeiws%20Likes)"
-                target="_blank">
-                Instagram Services (Followers, Likes, Veiws)
-            </a>
-            <a href="https://wa.me/923190831123?text=Hi Sir!%20I%20am%20interested%20in%20More%20Trusted%20Services"
-                target="_blank">
-                More Trusted Services Available
-            </a>
-        </div>
+      <div class="services-buttons">
+        <a href="https://wa.me/923190831123?text=Hi Sir!%20I%20need%20details%20about%20All%20network%20Fresh%20Number%20Details" target="_blank">
+          All Network Fresh Number Details (Name, CNIC, Address)
+        </a>
+        <a href="https://wa.me/923190831123?text=Hi Sir!%20I%20need%20details%20about%20All%20numbers%20against%20CNIC" target="_blank">
+          All Numbers gainst CNIC
+        </a>
+        <a href="https://wa.me/923190831123?text=Hi Sir!%20I%20want%20Nadra%20CNIC%20Verification" target="_blank">
+          Nadra CNIC Verification
+        </a>
+        <a href="https://wa.me/923190831123?text=Hi Sir!%20I%20need%20Pin%20Point%20Location" target="_blank">
+          Pin Point Location
+        </a>
+        <a href="https://wa.me/923190831123?text=Hi Sir!%20I%20need%20Family%20Tree" target="_blank">
+          Family Tree
+        </a>
+        <a href="https://wa.me/923190831123?text=Hi Sir!%20I%20need%20CDR%20(Call%20Data%20Record)" target="_blank">
+          CDR (Call Data Record)
+        </a>
+        <a href="https://wa.me/923190831123?text=Hi Sir!%20I%20want%20IMEI%20Tracking%20(Stolen%20or%20Lost%20Mob%20Trace)" target="_blank">
+          IMEI Tracking (Stolen or Lost Mob Trace)
+        </a>
+        <a href="https://wa.me/923190831123?text=Hi Sir!%20I%20need%20Fake%20WhatsApp%20Number" target="_blank">
+          Fake WhatsApp Number
+        </a>
+        <a href="https://wa.me/923190831123?text=Hi Sir!%20I%20want%20Vehicle%20Details" target="_blank">
+          Vehicle Details
+        </a>
+        <a href="https://wa.me/923190831123?text=Hi Sir!%20I%20want%20Marriage%20Certificate%20(Copy)" target="_blank">
+          Marriage Certificate (Copy)
+        </a>
+        <a href="https://wa.me/923190831123?text=Hi Sir!%20I%20want%20Death%20Certificate%20(Copy)" target="_blank">
+          Death Certificate (Copy)
+        </a>
+        <a href="https://wa.me/923190831123?text=Hi Sir!%20I%20need%20FRC%20(Family%20Registration%20Certificate)" target="_blank">
+          FRC (Family Registration Certificate)
+        </a>
+        <a href="https://wa.me/923190831123?text=Hi Sir!%20I%20want%20Vaccination%20(Corona%2C%20Booster%2C%20Polio)" target="_blank">
+          Vaccination (Corona, Booster, Polio)
+        </a>
+        <a href="https://wa.me/923190831123?text=Hi Sir!%20I%20need%20Travel%20History" target="_blank">
+          Travel History
+        </a>
+        <a href="https://wa.me/923190831123?text=Hi Sir!%20I%20want%20Passport%20Details" target="_blank">
+          Passport Details
+        </a>
+        <a href="https://wa.me/923190831123?text=Hi Sir!%20I%20want%20Fake%20Calling%20Software%20(Private%2C%20Unknown%20Number)" target="_blank">
+          Fake Calling Software (Private, Unknown Number)
+        </a>
+        <a href="https://wa.me/923190831123?text=Hi Sir!%20I%20want%20Tiktok%20Services%20(Followers%2CVeiws%20Likes)" target="_blank">
+          TikTok Services (Followers, Likes, Veiws, Comments)
+        </a>
+        <a href="https://wa.me/923190831123?text=Hi Sir!%20I%20want%20Instagram%20Services%20(Followers%2CVeiws%20Likes)" target="_blank">
+          Instagram Services (Followers, Likes, Veiws)
+        </a>
+        <a href="https://wa.me/923190831123?text=Hi Sir!%20I%20am%20interested%20in%20More%20Trusted%20Services" target="_blank">
+          More Trusted Services Available
+        </a>
+      </div>
 
-        <h3 class="services-subheading">Mobile Hacking Available</h3>
+      <h3 class="services-subheading">Mobile Hacking Available</h3>
 
-        <div class="mobile-hacking-buttons">
-            <a href="https://wa.me/923190831123?text=Hi Sir!%20I%20need%20Free%20Fire%20Hacking%20Support"
-                target="_blank">Free Fire Hacking</a>
-            <a href="https://wa.me/923190831123?text=Hi Sir!%20I%20need%20PUBG%20Hacking%20Support" target="_blank">PUBG
-                Hacking</a>
-            <a href="https://wa.me/923190831123?text=Hi Sir!%20I%20need%20Computer%20Hacking%20Support"
-                target="_blank">Computer Hacking</a>
-            <a href="https://wa.me/923190831123?text=Hi Sir!%20I%20need%20Mobile%20Hacking%20Support"
-                target="_blank">Mobile Hacking</a>
-        </div>
+      <div class="mobile-hacking-buttons">
+        <a href="https://wa.me/923190831123?text=Hi Sir!%20I%20need%20Free%20Fire%20Hacking%20Support" target="_blank">Free Fire Hacking</a>
+        <a href="https://wa.me/923190831123?text=Hi Sir!%20I%20need%20PUBG%20Hacking%20Support" target="_blank">PUBG Hacking</a>
+        <a href="https://wa.me/923190831123?text=Hi Sir!%20I%20need%20Computer%20Hacking%20Support" target="_blank">Computer Hacking</a>
+        <a href="https://wa.me/923190831123?text=Hi Sir!%20I%20need%20Mobile%20Hacking%20Support" target="_blank">Mobile Hacking</a>
+      </div>
     </section>
     <!-- END: Services Section -->
-     <footer>
-    © 2025 King Database. All Rights Reserved.
-  </footer>
+  </div>
 
-    <script src="script.js"></script>
+  <!-- Scripts -->
+  <script src="script.js"></script>
 </body>
-
-
 </html>
-
