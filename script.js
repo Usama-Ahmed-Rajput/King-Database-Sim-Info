@@ -112,7 +112,7 @@ searchBtn.addEventListener("click", () => {
         <p><strong>Method:</strong> EasyPaisa</p>
         <p><strong>Account Holder:</strong> Usama Ahmed</p>
         <p><strong>Account Number:</strong> 03079970288</p>
-        <p><strong>Amount:</strong> Rs.300</p>
+        <p><strong>Amount:</strong> Rs.500</p>
       </div>
 
       <p style="margin-top:18px; color:#ccc; font-size:14px;">
@@ -127,6 +127,7 @@ searchBtn.addEventListener("click", () => {
     </div>
   `;
 });
+
 
 
 
