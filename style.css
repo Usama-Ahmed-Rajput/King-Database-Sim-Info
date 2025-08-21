@@ -1,3 +1,4 @@
+/* Base Reset */
 * {
   font-family: 'Poppins', sans-serif;
   margin: 0;
@@ -5,29 +6,112 @@
   box-sizing: border-box;
 }
 
-body {
+/* ===== HACKER (LOGIN) THEME ===== */
+body.hacker-mode {
+  background: #000;
+  color: #00ff00;
+  overflow: hidden; /* login par scroll band */
+}
+
+/* Matrix canvas behind everything (login only) */
+body.hacker-mode #matrix {
+  position: fixed;
+  top: 0; left: 0;
+  z-index: -1;
+}
+
+.login-page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  flex-direction: column;
+}
+
+.login-box {
+  background: rgba(0, 0, 0, 0.85);
+  padding: 30px;
+  border: 2px solid #00ff00;
+  border-radius: 10px;
+  text-align: center;
+  box-shadow: 0 0 20px #00ff00;
+}
+
+.login-box h2 {
+  margin-bottom: 20px;
+  text-shadow: 0 0 10px #00ff00;
+  font-family: 'Courier New', monospace;
+}
+
+.login-box input {
+  display: block;
+  width: 240px;
+  margin: 10px auto;
+  padding: 10px;
+  border: 1px solid #00ff00;
+  border-radius: 5px;
+  background: #000;
+  color: #00ff00;
+  text-align: center;
+  outline: none;
+}
+
+.login-box button {
+  background: #000;
+  color: #00ff00;
+  border: 2px solid #00ff00;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+  text-shadow: 0 0 10px #00ff00;
+  transition: 0.3s;
+}
+
+.login-box button:hover {
+  background: #00ff00;
+  color: #000;
+}
+
+.error {
+  color: #ff3b3b;
+  margin-top: 10px;
+  display: none;
+}
+
+/* Hide utility */
+.hidden { display: none; }
+
+/* ===== REAL SITE THEME ===== */
+.site {
+  padding: 50px 20px;
   background: #000;
   color: #0f0;
-  text-align: center;
-  padding: 50px 20px;
+  min-height: 100vh;
 }
 
 h1 {
   font-family: 'Bebas Neue', sans-serif;
   font-size: 48px;
-  color: black;
+  color: #000;
   text-shadow: 0 0 15px #0f0, 0 0 30px #0f0;
   margin-bottom: 10px;
+  text-align: center;
 }
 
 .sub {
   font-size: 16px;
   color: #ccc;
   margin-bottom: 30px;
+  text-align: center;
 }
 
 .search {
   margin-bottom: 25px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
 }
 
 .search input {
@@ -42,13 +126,10 @@ h1 {
   box-shadow: 0 0 10px #0f0 inset;
 }
 
-.search input::placeholder {
-  color: #888;
-}
+.search input::placeholder { color: #888; }
 
 .search button {
   padding: 12px 25px;
-  margin-left: 10px;
   border: none;
   border-radius: 8px;
   background: #0f0;
@@ -69,17 +150,12 @@ h1 {
   margin-top: 20px;
   font-size: 20px;
   color: #ccc;
-
-  p {
-    font-size: 30px;
-  }
+  text-align: center;
 }
-
 .actions strong {
   color: #0f0;
   text-shadow: 0 0 10px #0f0;
 }
-
 .actions .btn {
   display: inline-block;
   margin: 8px 6px;
@@ -92,23 +168,13 @@ h1 {
   box-shadow: 0 0 10px #0f0, 0 0 20px #0f0 inset;
   transition: all 0.3s;
 }
-
 .actions .btn:hover {
   background: #0f0;
   color: #000;
   box-shadow: 0 0 25px #0f0;
 }
 
-/* #result {
-  box-shadow: 0 0 20px #00ff00;
-  border-radius: 8px;
-  color: #00ff00;
-  width: 30%;
-  text-align: justify;
-  margin: auto;
-} */
-
-/* Additional styles for services section */
+/* Services */
 .services-container {
   max-width: 700px;
   margin: 40px auto 60px;
@@ -119,22 +185,21 @@ h1 {
   border-radius: 12px;
   box-shadow: 0 0 20px #00ff00;
 }
-
 .services-container h2 {
   text-align: center;
   margin-bottom: 20px;
   font-weight: bold;
   font-size: 28px;
 }
-
-.services-buttons {
+.services-buttons,
+.mobile-hacking-buttons {
   display: flex;
   flex-wrap: wrap;
   gap: 12px;
   justify-content: center;
 }
-
-.services-buttons a {
+.services-buttons a,
+.mobile-hacking-buttons a {
   flex: 1 1 280px;
   background: #222;
   color: #0f0;
@@ -146,13 +211,12 @@ h1 {
   box-shadow: 0 0 8px #0f0;
   transition: background 0.3s;
 }
-
-.services-buttons a:hover {
+.services-buttons a:hover,
+.mobile-hacking-buttons a:hover {
   background: #0f0;
   color: #000;
   box-shadow: 0 0 15px #0f0;
 }
-
 .services-subheading {
   margin-top: 35px;
   font-weight: bold;
@@ -162,92 +226,29 @@ h1 {
   text-align: center;
 }
 
-.mobile-hacking-buttons {
-  display: flex;
-  gap: 12px;
-  justify-content: center;
-  flex-wrap: wrap;
-  margin-top: 15px;
-}
-
-.mobile-hacking-buttons a {
-  flex: 1 1 180px;
-  background: #222;
-  color: #0f0;
-  padding: 14px 20px;
-  border-radius: 8px;
-  text-align: center;
-  font-weight: bold;
-  text-decoration: none;
-  box-shadow: 0 0 8px #0f0;
-  transition: background 0.3s;
-}
-
-.mobile-hacking-buttons a:hover {
-  background: #0f0;
-  color: #000;
-  box-shadow: 0 0 15px #0f0;
-}
-
-/* ✅ Mobile Responsive Styles */
+/* Responsive */
 @media (max-width: 768px) {
-  body {
-    padding: 30px 15px;
-  }
+  .site { padding: 30px 15px; }
+  h1 { font-size: 32px; }
+  .sub { font-size: 14px; }
 
-  h1 {
-    font-size: 32px;
-  }
-
-  .sub {
-    font-size: 14px;
-  }
-
-  .search {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-
+  .search { flex-direction: column; }
   .search input {
     width: 100%;
-    max-width: 100%;
     margin-bottom: 12px;
     font-size: 16px;
   }
-
   .search button {
     width: 100%;
-    max-width: 100%;
-    margin-left: 0;
-    font-size: 16px;
-    margin-top: 5px;
-  }
-
-  .actions {
     font-size: 16px;
   }
 
-  .actions p {
-    font-size: 22px;
-  }
+  .actions { font-size: 16px; }
+  .actions p { font-size: 22px; }
+  .actions .btn { width: 100%; max-width: 250px; }
 
-  .actions .btn {
-    width: 100%;
-    max-width: 250px;
-    text-align: center;
-    font-size: 14px;
-  }
-
-  .services-container {
-    padding: 18px;
-    margin: 20px auto 40px;
-  }
-
-  .services-container h2 {
-    font-size: 22px;
-  }
-
+  .services-container { padding: 18px; margin: 20px auto 40px; }
+  .services-container h2 { font-size: 22px; }
   .services-buttons a,
   .mobile-hacking-buttons a {
     flex: 1 1 100%;
@@ -257,27 +258,8 @@ h1 {
 }
 
 @media (max-width: 480px) {
-  h1 {
-    font-size: 26px;
-  }
-
-  .sub {
-    font-size: 13px;
-  }
-
-  .actions p {
-    font-size: 18px;
-  }
-
-  .services-container h2 {
-    font-size: 20px;
-  }
-
-  .services-subheading {
-    font-size: 18px;
-  }
+  h1 { font-size: 26px; }
+  .sub { font-size: 13px; }
+  .services-container h2 { font-size: 20px; }
+  .services-subheading { font-size: 18px; }
 }
-
-
-
-
