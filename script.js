@@ -60,7 +60,7 @@ function stopMatrixAndShowSite() {
 }
 
 // Default credentials (change here)
-const VALID_USER = "H4K3R";
+const VALID_USER = "Admin";
 const VALID_PASS = "H4K3R";
 
 function tryLogin() {
@@ -128,3 +128,4 @@ if (searchBtn && resultDiv) {
     `;
   });
 }
+
