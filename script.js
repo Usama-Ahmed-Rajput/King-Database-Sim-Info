@@ -58,7 +58,7 @@ function stopMatrixAndShowSite() {
 }
 
 const VALID_USER = "Admin";
-const VALID_PASS = "H4K3R";
+const VALID_PASS = "Usama@H4K3R";
 
 function tryLogin() {
   const user = document.getElementById("username").value.trim();
@@ -172,3 +172,4 @@ if (searchBtn) {
     }
   });
 }
+
